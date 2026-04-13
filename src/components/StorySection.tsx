@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import founderImg from "@/assets/humankako-dopamine.png";
 import teamImg from "@/assets/dopamine-team.jpg";
+import video from "../assets/humankako-story.mp4";
 
 const StorySection = () => {
   return (
@@ -28,8 +28,17 @@ const StorySection = () => {
             viewport={{ once: true }}
           >
             <div className="relative rounded-2xl overflow-hidden box-glow-purple">
-              <img src={founderImg} alt="HumanKako - Founder of Dopamine" className="w-full object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+<div className="flex justify-center">
+  <video
+    src={video}
+    autoPlay
+    muted
+    loop
+    playsInline
+    className="w-[700px] h-[650px] object-cover rounded-2xl shadow-2xl"
+  />
+</div>
+              <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent pointer-events-none" />
               <div className="absolute bottom-6 left-6">
                 <p className="font-display text-3xl text-primary">HUMANKAKO</p>
                 <p className="text-muted-foreground">Founder & Creator</p>
@@ -47,16 +56,18 @@ const StorySection = () => {
               DARE TO BE STUPID
             </h3>
             <p className="text-muted-foreground leading-relaxed">
-              It started as a joke. A YouTuber with a dream and way too much dopamine. 
+              It started as a joke. A YouTuber with a dream and way too much caffeine. 
               HumanKako — Georgia's most chaotic content creator — decided the energy drink 
-              market needed something different. Something real. Something that wold defeat the Redi Bulia.
+              market needed something different. Something real. Something that doesn't take 
+              itself too seriously.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              Dopamine isn't just a drink. It's a movement. Born from late-night editing sessions...
-               crafted for anyone who believes that being yourself is the ultimate superpower.
+              Dopamine isn't just a drink. It's a movement. Born from late-night editing sessions, 
+              fueled by the creativity of a million subscribers, and crafted for anyone who believes 
+              that being yourself is the ultimate superpower.
             </p>
             <p className="text-foreground font-semibold text-lg">
-              "მე კაკო ვარ დოპამინით სავსე კაცი"
+              "I wanted to make something that makes you feel as alive as hitting publish on your best video."
             </p>
             <p className="text-primary font-display text-xl tracking-wider">— HUMANKAKO</p>
           </motion.div>
@@ -68,7 +79,7 @@ const StorySection = () => {
           viewport={{ once: true }}
           className="relative rounded-2xl overflow-hidden"
         >
-          <img src={teamImg} alt="Dopamine Team" className="w-full object-cover max-h-96" />
+          <img src={teamImg} alt="Dopamine Team" className="w-full object-cover max-h-96" loading="lazy" />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
           <div className="absolute bottom-8 left-8">
             <p className="font-display text-4xl text-primary text-glow-yellow">DARE TO BE STUPID</p>
